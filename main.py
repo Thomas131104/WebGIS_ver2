@@ -20,11 +20,11 @@ app.include_router(geo_query_router)
 
 
 
-if __name__ == "__main__":
-    config = Config()
-    config.bind = [
-        "0.0.0.0:60000",
-    ]
-
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(serve(app, config))
+# if __name__ == "__main__":
+#     config = Config()
+#     config.bind = [
+#         "0.0.0.0:60000",
+#     ]
+#
+#     loop = asyncio.get_event_loop()
+#     loop.run_until_complete(serve(app, config))
