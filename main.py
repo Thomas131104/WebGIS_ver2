@@ -22,7 +22,9 @@ app.include_router(geo_query_router)
 
 if __name__ == "__main__":
     config = Config()
-    config.bind = ["127.0.0.1:60000", "127.0.0.1:60001"]
+    config.bind = [
+        "0.0.0.0:60000",
+    ]
 
     loop = asyncio.get_event_loop()
     loop.run_until_complete(serve(app, config))
